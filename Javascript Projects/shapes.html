@@ -27,6 +27,8 @@
 
 <body>
 
+	<p>Your Time (seconds): <span id="time"></span></p>
+
 	<div id="box"></div>
 
 	<script type="text/javascript">
@@ -59,7 +61,7 @@
 		// Gets the difference in times in seconds (1 sec = 1000 millisec)
 		reactionTime = (clickedTime - createdTime) / 1000;
 
-		alert(reactionTime);
+		document.getElementById("time").innerHTML=reactionTime;
 
 		this.style.display="none";
 
