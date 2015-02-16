@@ -1,0 +1,130 @@
+.knotts
+{
+	opacity: 0.3;
+	width: 653px;
+	height: 490px; 
+	background: url("images/kristie-at-beach-no-color.png") no-repeat;
+}
+
+.knotts:hover 
+{
+	opacity: 0.8;
+	width: 653px;
+	height: 490px; 
+	background: url("images/kristie-at-beach.jpg") no-repeat; 
+}
+
+.LoveCalcLink
+{
+	opacity: 0.3;
+	width: 248px;
+	height: 248px;
+	padding: 5%;
+	background-image: url('images/onlinelovecalculator-no-color.png');
+}
+
+.LoveCalcLink:hover 
+{
+	width: 248px;
+	height: 248px;	
+	opacity: 1;
+	background-image: url('images/onlinelovecalculator.png') ;
+}
+
+.FreecycleLink
+{
+	opacity: 0.3;
+	width: 248px;
+	height: 248px;
+	padding: 5%;
+	background-image: url('images/freecycleguide-no-color.png');
+}
+
+.FreecycleLink:hover 
+{
+	width: 248px;
+	height: 248px;
+	opacity: 1;
+	background-image: url('images/freecycleguide.png');
+}
+
+.CatRescueLink
+{
+	opacity: 0.3;
+	width: 248px;
+	height: 248px;
+	padding: 5%;
+	background-image: url('images/projectcatrescue-no-color.png');
+}
+
+.CatRescueLink:hover 
+{
+	width: 248px;
+	height: 248px;
+	opacity: 1;
+	background-image: url('images/projectcatrescue.png');
+}
+
+.githubpic
+{
+	opacity: 0.5;
+	width: 46px; 
+	height: 46px; 
+	background: url("images/icons/github.png") no-repeat; 
+}
+
+.githubpic:hover 
+{ 
+	opacity: 1;
+	width: 46px; 
+	height: 46px;
+	background: url("images/icons/github.png") no-repeat; 
+}
+
+.Twitterpic
+{ 
+	opacity: 0.5;
+	width: 46px; 
+	height: 46px; 
+	background: url("images/icons/twitter.png") no-repeat;
+}
+
+.Twitterpic:hover 
+{
+	opacity: 1;
+	width: 46px; 
+	height: 46px;
+	background: url("images/icons/twitter.png") no-repeat; 
+}
+
+.mailpic
+{ 
+	opacity: 0.5;
+	width: 46px; 
+	height: 46px; 
+	background: url("images/icons/gmail.png") no-repeat;
+}
+
+.mailpic:hover 
+{
+	opacity: 1;
+	width: 46px; 
+	height: 46px;
+	background: url("images/icons/gmail.png") no-repeat; 
+}
+
+.top
+{
+	opacity: 0.4;
+	width: 46px; 
+	height: 46px; 
+	background: url("images/icons/icon_top.png") no-repeat; 
+}
+
+.top:hover 
+{ 
+	opacity: 0.7;
+	width: 46px; 
+	height: 46px;
+	background: url("images/icons/icon_top.png") no-repeat; 
+}
