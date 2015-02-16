@@ -99,6 +99,11 @@ img.tamato
 	padding-bottom: 0;
 	padding-left: 1%;
 }
+
+header
+{
+	opacity: 0.8;
+}
  
 nav
 {
@@ -318,20 +323,6 @@ footer
 			padding: 0 0px 20px 0px;
 			width: 56px; 
 			height: 56px; 
-		}
-
-	#bottomFooter
-	{
-		float: center;
-	}
-
-		img.starfish
-		{
-			opacity: 0.5;
-			width: 490;
-			height: 298;
-			border: 10px solid white;
-			border-radius: 16px;
 		}
 
 		img.top
