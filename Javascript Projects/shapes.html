@@ -18,6 +18,7 @@
 		background-color: blue;
 		width: 200px;
 		height: 200px;
+		display: none;
 	}
 
 	</style>
@@ -30,21 +31,27 @@
 
 	<script type="text/javascript">
 
-	var timer;
-
-	document.getElementById("box").onclick=function()
+	function makeBox()
 	{
-		document.getElementById("box").style.display="none";
-
-		timer = Math.random(); // Gives a value between 0 and 1
+		var timer = Math.random();
 		timer = timer * 5000;
 
 		setTimeout(function()
 		{
+
 			document.getElementById("box").style.display="block";
 
-		}, timer)
+		}, timer);
 	}
+
+	document.getElementById("box").onclick=function()
+	{
+		this.style.display="none";
+
+		makeBox();
+	}
+
+	makeBox();
 
 	</script>
 
