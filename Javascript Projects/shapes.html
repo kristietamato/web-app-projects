@@ -31,13 +31,20 @@
 
 	<script type="text/javascript">
 
+	var clickedTime;
+	var createdTime;
+	var reactionTime;
+	var timer;
+
 	function makeBox()
 	{
-		var timer = Math.random();
+		timer = Math.random();
 		timer = timer * 5000;
 
 		setTimeout(function()
 		{
+			// Time when the function starts
+			createdTime = Date.now();
 
 			document.getElementById("box").style.display="block";
 
@@ -46,6 +53,14 @@
 
 	document.getElementById("box").onclick=function()
 	{
+		// Time when the user clicks on shape
+		clickedTime = Date.now();
+
+		// Gets the difference in times in seconds (1 sec = 1000 millisec)
+		reactionTime = (clickedTime - createdTime) / 1000;
+
+		alert(reactionTime);
+
 		this.style.display="none";
 
 		makeBox();
