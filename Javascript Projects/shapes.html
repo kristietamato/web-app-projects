@@ -37,7 +37,24 @@
 	var createdTime;
 	var reactionTime;
 	var timer;
+	var letters;
+	var color;
 
+	// Generates a random code for a color
+	function getRandomColor()
+	{
+	    letters = '0123456789ABCDEF'.split('');
+	    color = '#';
+
+	    for (var i = 0; i < 6; i++ )
+	    {
+	        color += letters[Math.floor(Math.random() * 16)];
+	    }
+
+	    return color;
+	}
+
+	// Gets random color, displays a box or circle, and starts the timer
 	function makeBox()
 	{
 		timer = Math.random();
@@ -45,6 +62,17 @@
 
 		setTimeout(function()
 		{
+			if (Math.random() > 0.5)
+			{
+				document.getElementById("box").style.borderRadius="100px";
+			}
+			else
+			{
+				document.getElementById("box").style.borderRadius="0";
+			}
+
+			document.getElementById("box").style.backgroundColor=getRandomColor();
+
 			// Time when the function starts
 			createdTime = Date.now();
 
@@ -53,6 +81,7 @@
 		}, timer);
 	}
 
+	// Gets and displays the reaction time
 	document.getElementById("box").onclick=function()
 	{
 		// Time when the user clicks on shape
