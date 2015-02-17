@@ -27,13 +27,22 @@
 		position: relative;
 	}
 
+	#yourtime
+	{
+		font-weight: bold;
+	}
+
 	</style>
 
 </head>
 
 <body>
 
-	<p>Your Reaction Time (in seconds): <span id="time"></span></p>
+	<h1>Test Your Reactions</h1>
+
+	<p> See how fast you can click the shapes!</p>
+
+	<p id="yourtime">Your time: <span id="time"></span></p>
 
 	<div id="box"></div>
 
@@ -96,7 +105,6 @@
 			// Time when the function starts
 			createdTime = Date.now();
 
-
 		}, timer);
 	}
 
@@ -109,7 +117,7 @@
 		// Gets the difference in times in seconds (1 sec = 1000 millisec)
 		reactionTime = (clickedTime - createdTime) / 1000;
 
-		document.getElementById("time").innerHTML=reactionTime;
+		document.getElementById("time").innerHTML=reactionTime + "s";
 
 		this.style.display="none";
 
