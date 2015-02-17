@@ -42,12 +42,14 @@
 
 	<p>This is some text</p>
 
+	<iframe src="http://www.tamato.org"></iframe>
+
 	<script>
 
-		$("#circle").click(function()
+		$("#circle").hover(function()
 		{
 
-			$("p").html("The text has been changed!");
+			$("iframe").attr("src", "http://blog.tamato.org");
 
 		});
 
