@@ -14,21 +14,21 @@
 
 	<style>
 
-	#circle
-	{
-		width: 200px;
-		height: 200px;
-		background-color: green;
-		border-radius: 100px;
-	}
+		#circle
+		{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			border-radius: 100px;
+		}
 
-	.square
-	{
-		width: 200px;
-		height: 200px;
-		background-color: red;
-		margin-top: 10px;
-	}
+		.square
+		{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin-top: 10px;
+		}
 
 	</style>
 
@@ -36,17 +36,20 @@
 
 </head>
 
- 
-
 <body>
 
 	<div id="circle"></div>
 
-	<div class="square"></div>
-
-	<div class="square"></div>
+	<p>This is some text</p>
 
 	<script>
+
+		$("#circle").click(function()
+		{
+
+			$("p").html("The text has been changed!");
+
+		});
 
 	</script>
 
