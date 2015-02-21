@@ -11,6 +11,9 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+	<!-- jQuery UI theme -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
 
 	<style>
 
@@ -30,20 +33,31 @@
 			margin-top: 10px;
 		}
 
+		#square2
+		{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+			margin-top: 10px;
+		}
+
+
 	</style>
 
 	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 
-	<!-- jQuery UI pluging -->
+	<!-- jQuery UI plugin -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
 </head>
 
 <body>
 
-	<div id="circle">Click for animation</div>
+	<div id="circle"></div>
 
 	<div id="square">You can drag me</div>
+
+	<div id="square2">You can resize me</div>
 
 	<p>This is some text</p>
 
@@ -81,6 +95,8 @@
 		});
 
 		$("#square").draggable();
+
+		$("#square2").resizable();
 
 	</script>
 
