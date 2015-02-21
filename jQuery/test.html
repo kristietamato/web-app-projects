@@ -75,6 +75,29 @@
 
 	<button id="fadeIn">Fade in</button>
 
+	<div id="accordion">
+
+		<h3>Title</h3>
+			<p>Some paragraph.</p>
+
+		<h3>Title</h3>
+			<p>Some paragraph.</p>
+
+		<h3>Title</h3>
+			<p>Some paragraph.</p>
+
+		<h3>Title</h3>
+			<p>Some paragraph.</p>
+
+	</div>
+
+	<ul>
+		<li>Spring</li>
+		<li>Summer</li>
+		<li>Fall</li>
+		<li>Winter</li>
+	</ul>
+
 	<script>
 
 		$("#fadeOut").click(function()
@@ -115,6 +138,10 @@
 		});
 
 		$("#square2").resizable();
+
+		$("#accordion").accordion();
+
+		$("ul").sortable();
 
 	</script>
 
