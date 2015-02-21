@@ -60,8 +60,21 @@
 		{
 			$("p").fadeIn("slow", function()
 			{
-				alert("Fade out complete");
+				alert("Fade in complete");
 			});
+		});
+
+		// animate circle on click
+		$("#circle").click(function()
+		{
+			$(this).animate(
+				{
+					width: "300px",
+					height: "300px",
+					borderRadius: "150px",
+					marginLeft: "100px",
+					marginTop: "100px"
+				}, 1500);
 		});
 
 	</script>
