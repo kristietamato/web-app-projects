@@ -22,7 +22,7 @@
 			border-radius: 100px;
 		}
 
-		.square
+		#square
 		{
 			width: 300px;
 			height: 300px;
@@ -34,13 +34,16 @@
 
 	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 
+	<!-- jQuery UI pluging -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
 
-	<div id="circle"></div>
+	<div id="circle">Click for animation</div>
 
-	<div class="square"></div>
+	<div id="square">You can drag me</div>
 
 	<p>This is some text</p>
 
@@ -76,6 +79,8 @@
 					marginTop: "100px"
 				}, 1500);
 		});
+
+		$("#square").draggable();
 
 	</script>
 
