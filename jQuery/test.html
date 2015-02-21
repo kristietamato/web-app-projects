@@ -42,14 +42,26 @@
 
 	<div class="square"></div>
 
-	<div class="square"></div>
+	<p>This is some text</p>
+
+	<button id="fadeOut">Fade out</button>
+
+	<button id="fadeIn">Fade in</button>
 
 	<script>
 
-		$("div").click(function()
+		$("#fadeOut").click(function()
 		{
-			// this refers to the element clicked
-			$(this).hide();
+			// Fade out in 2000 milliseconds
+			$("p").fadeOut(2000);
+		});
+
+		$("#fadeIn").click(function()
+		{
+			$("p").fadeIn("slow", function()
+			{
+				alert("Fade out complete");
+			});
 		});
 
 	</script>
