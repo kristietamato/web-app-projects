@@ -47,6 +47,13 @@
 			width: 100px;
 		}
 
+		#error
+		{
+			color: red;
+			padding-left: 150px;
+			padding-bottom: 10px;
+		}
+
 	</style>
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
@@ -57,19 +64,21 @@
 
 	<div id="wrapper">
 
+	<div id="error" value="Error"></div>
+
 	<form id="validationForm">
 
 		<label for="email">Email</label>
 		<input name="email" id="email"/>
 
 		<label for="phone">Phone</label>
-		<input name="phone" />
+		<input name="phone" id="phone"/>
 
 		<label for="pass">Password</label>
-		<input name="pass" type="password" />
+		<input name="pass" type="password" id="pass1"/>
 
 		<label for="confirm">Confirm Password</label>
-		<input name="confirm" />
+		<input name="confirm" type="password" id="pass2"/>
 
 		<input id="submitButton" type="submit" value="Submit" />
 
@@ -81,6 +90,8 @@
 
 	$("#validationForm").submit(function(event)
 	{
+		var errorMessage = "";
+
 		event.preventDefault(); // prevents data submission
 
 		function isValidEmailAddress(emailAddress) 
@@ -91,8 +102,26 @@
 
 		if (!isValidEmailAddress($("#email").val()))
 		{
-			alert("Invalid email");
+			errorMessage = "Please enter a valid email";
 		}
+
+		if (!$.isNumeric($("#phone").val()))
+		{
+			errorMessage = errorMessage + "<br />Please enter a valid phone number";
+		}
+
+		if ($("#pass1").val() != $("#pass2").val())
+		{
+			errorMessage = errorMessage + "<br />Please enter matching passwords";
+		}
+
+		if (errorMessage == "")
+		{
+			alert("Success!");
+		}
+
+		$("#error").html(errorMessage);
+
 	});
 
 	</script>
