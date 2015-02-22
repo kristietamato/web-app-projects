@@ -77,6 +77,7 @@
 
 	.codeContainer
 	{
+		height: 100%;
 		width: 50%;
 		position: relative;
 		float: left;
@@ -84,13 +85,14 @@
 
 	.codeContainer textarea
 	{
-		width: 100%;
+		width: 99%;
 		height: 100%;
+		border-top: none;
 		border-right: 1px solid grey;
 		font-family: monotype;
 		font-size: 90%;
 		padding: 5px;
-		border-top: none;
+
 	}
 
 	.codeLabel
@@ -100,7 +102,7 @@
 		top: 10px;
 	}
 
-	#cssContainer, #jsContainer
+	#CSSContainer, #JavascriptContainer
 	{
 		display: none;
 	}
@@ -149,8 +151,8 @@
 			<ul id="toggles">
 
 				<li class="toggle selected">HTML</li>
-				<li class="toggle">CSS</li>
-				<li class="toggle">Javascript</li>
+				<li class="toggle ">CSS</li>
+				<li class="toggle ">Javascript</li>
 				<li class="toggle selected" style="border:none">Result</li>
 			</ul>
 
@@ -158,7 +160,7 @@
 
 		<div class="clear"></div>
 
-		<div class="codeContainer" id="htmlContainer">
+		<div class="codeContainer" id="HTMLContainer">
 
 			<div class="codeLabel">HTML</div>
 
@@ -166,7 +168,7 @@
 
 		</div>
 
-		<div class="codeContainer" id="cssContainer">
+		<div class="codeContainer" id="CSSContainer">
 
 			<div class="codeLabel">CSS</div>
 
@@ -174,7 +176,7 @@
 
 		</div>
 
-		<div class="codeContainer" id="jsContainer">
+		<div class="codeContainer" id="JavascriptContainer">
 
 			<div class="codeLabel">Javascript</div>
 
@@ -182,9 +184,9 @@
 
 		</div>
 
-		<div class="codeContainer" id="resultsContainer">
+		<div class="codeContainer" id="ResultContainer">
 
-			<div class="codeLabel">Results</div>
+			<div class="codeLabel">Result</div>
 
 			<iframe src=""></iframe>
 
@@ -193,9 +195,9 @@
 
 	<script>
 
-		var windowHeight=$(window).height(); // 762px
+		var windowHeight=$(window).height(); // window height
 
-		var menuBarHeight=$("#menuBar").height(); // 40px
+		var menuBarHeight=$("#menuBar").height(); // menu bar height
 
 		var codeContainerHeight = windowHeight - menuBarHeight;
 
@@ -204,7 +206,21 @@
 		$(".toggle").click(function()
 		{
 			$(this).toggleClass("selected");
-		})
+
+			var activeDiv=$(this).html();
+
+			$("#" + activeDiv + "Container").toggle();
+
+			var showingDivs=$(".codeContainer").filter(function()
+			{
+				return($(this).css("display") != "none");
+
+			}).length;
+
+			var width = 100/showingDivs; // 100% of width divided by divs selected
+
+			$(".codeContainer").css("width", width + "%");
+		});
 
 	</script>
 
