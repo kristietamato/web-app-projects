@@ -164,7 +164,7 @@
 
 			<div class="codeLabel">HTML</div>
 
-			<textarea>Example code</textarea>
+			<textarea id="htmlCode">Example code</textarea>
 
 		</div>
 
@@ -172,7 +172,7 @@
 
 			<div class="codeLabel">CSS</div>
 
-			<textarea>Example code</textarea>
+			<textarea id="cssCode">Example code</textarea>
 
 		</div>
 
@@ -180,7 +180,7 @@
 
 			<div class="codeLabel">Javascript</div>
 
-			<textarea>Example code</textarea>
+			<textarea id="jsCode">Example code</textarea>
 
 		</div>
 
@@ -220,6 +220,11 @@
 			var width = 100/showingDivs; // 100% of width divided by divs selected
 
 			$(".codeContainer").css("width", width + "%");
+		});
+		
+		$("#runButton").click(function()
+		{
+			$("iframe").contents().find('html').html("<style>" + $("#cssCode").val() + "</style>" + $("htmlCode").val());
 		});
 
 	</script>
