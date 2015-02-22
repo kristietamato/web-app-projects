@@ -74,9 +74,26 @@
 		clear: both;
 	}
 
+	.codeContainer
+	{
+		height: auto;
+		width: 300px;
+	}
+
+	.codeContainer textarea
+	{
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-right: 1px solid grey;
+		font-family: monotype;
+		font-size: 90%;
+		padding: 5px;
+	}
+
 	</style>
 
-	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 </head>
 
@@ -112,10 +129,21 @@
 
 		<div class="codeContainer" id="htmlContainer">
 
+		<textarea>Example code</textarea>
+
+		</div>
+
 	</div>
 
 	<script>
 
+		var windowHeight=$(window).height(); // 762px
+
+		var menuBarHeight=$("#menuBar").height(); // 40px
+
+		var codeContainerHeight = windowHeight - menuBarHeight;
+
+		$(".codeContainer").height(codeContainerHeight + "px");
 
 
 	</script>
