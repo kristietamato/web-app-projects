@@ -23,14 +23,15 @@
 
     <style>
 
-      .container
+      .navbar-brand
       {
-      	padding: 10px;
+        font-size: 1.8em;
       }
 
-      .navbar
+      #topContainer
       {
-        float: inline;
+        background-image: url("day-dream.jpg");
+        height: 600px;
       }
 
     </style>
@@ -51,20 +52,16 @@
         <!-- menu -->
         <div class="navbar-header">
 
-          <a href="" class="navbar-brand">Happy Tamato</a>
-
-          <button type="button" class="navbar-toggle" data-
+          <button class="navbar-toggle" data-
           toggle="collapse" data-target=".navbar-collapse">
 
-             <span class="sr-only"></span>
-
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
              <span class="icon-bar"></span>
 
-             <span class="icon-bar"></span>
+          </button>
 
-             <span class="icon-bar"></span>
-
-           </button>
+          <a class="navbar-brand">Happy Tamato</a>           
 
         </div>
 
@@ -72,48 +69,42 @@
 
           <ul class="nav navbar-nav">
 
-            <li><a href="">Main</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Download The App</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#download">Download The App</a></li>
 
           </ul>
 
-        </div>
-        <!-- end menu -->
-
-
-        <!-- login form -->
-        <form id="login" class="form-inline" role="form">
-
-          <div class="container">
+          <!-- login form -->
+          <form class="navbar-form navbar-right">
 
             <div class="form-group">
-        
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="email" placeholder="Enter email" />
           
+                <input type="email" class="form-control" placeholder="Email" />
+            
             </div>
 
             <div class="form-group">
-        
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password" placeholder="Enter password" />
           
+            <input type="password" class="form-control" placeholder="Password" />
+            
             </div>
-        
+          
             <input type="submit" value="Login" class="btn btn-success" />
 
-          </div>
+          </form><!-- end login form -->
 
-        </form>
-        <!-- end login form -->
+        </div><!-- end menu -->
 
-      </div>
-      <!-- end container -->
+      </div><!-- end container -->
+
+    </div><!-- end top navigation bar -->
+
+    <div class="container" id="topContainer">
+
+
 
     </div>
-    <!-- end top navigation bar -->
-
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
