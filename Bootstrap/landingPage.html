@@ -31,7 +31,8 @@
       #topContainer
       {
         background-image: url("day-dream.jpg");
-        height: 600px;
+        width: 100%;
+        background-size: cover;
       }
 
     </style>
@@ -109,6 +110,11 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
+    <script>
+
+      $("#topContainer").css("min-height", $(window).height());
+
+    </script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
