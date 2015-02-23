@@ -32,7 +32,23 @@
       {
         background-image: url("day-dream.jpg");
         width: 100%;
-        background-size: cover;
+        background-size: cover; /* prevents background shrinking */
+      }
+
+      #topRow
+      {
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      #topRow h1
+      {
+        font-size: 300%;
+      }
+
+      .bold
+      {
+        font-weight: bold;
       }
 
     </style>
@@ -101,11 +117,41 @@
 
     </div><!-- end top navigation bar -->
 
+
+    <!-- main page content -->
     <div class="container" id="topContainer">
 
+      <div class="row">
 
+        <div class="col-md-6 col-md-offset-3" id="topRow">
+          
+          <h1>Happy Tamato App</h1>
 
-    </div>
+          <p class="lead">This is why you should download this fantastic app.</p>
+
+          <p>Some more information about the app. You can go into detail about the app here if you want.</p>
+
+          <p class="bold">Interested? Join our mailing list!</p>
+
+          <!-- mail list form -->
+          <form>
+            
+          <div class="input-group">
+            
+            <span class="input-group-addon">@</span>
+            <input type="email" class="form-control" placeholder="Your email" />
+            
+          </div>
+
+          <input type="submit" class="btn btn-success btn-lg" />
+
+          </form><!-- end mail list form -->
+
+        </div>
+
+      </div>
+
+    </div><!-- end main page content -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
