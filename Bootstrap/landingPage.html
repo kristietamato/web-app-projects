@@ -31,7 +31,7 @@
       #topContainer
       {
         background-image: url("images/day-dream.jpg");
-        height: 500px;
+        height: 300px;
         width: 100%;
         background-size: cover; /* prevents background shrinking */
       }
@@ -64,18 +64,16 @@
 
       .title
       {
-        margin-top: 100px;
+        margin-top: 40px;
         font-size: 300%;
       }
 
       #footer
       {
         background-color: #999966;
-      }
-
-      .marginBottom
-      {
-        margin-bottom: 30px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        width: 100%;
       }
 
       .appstoreImg
@@ -118,9 +116,9 @@
 
           <ul class="nav navbar-nav">
 
-            <li class="active"><a href="#home">Home</a></li>
+            <li class="active"><a href="#topContainer">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#download">Download The App</a></li>
+            <li><a href="#footer">Download The App</a></li>
 
           </ul>
 
@@ -159,16 +157,16 @@
           
           <h1 class="title" >Happy Tamato App</h1>
 
-          <p class="lead marginTop">This is why you should download this fantastic app.</p>
+          <p class="lead">This is why you should download this fantastic app.</p>
 
           <p>Some more information about the app. You can go into detail about the app here if you want.</p>
 
           <p class="bold marginTop">Interested? Join our mailing list!</p>
 
           <!-- mail list form -->
-          <form>
+          <form class="marginTop">
             
-          <div class="input-group marginTop">
+          <div class="input-group">
             
             <span class="input-group-addon">@</span>
             <input type="email" class="form-control" placeholder="Your email" />
@@ -186,20 +184,20 @@
     </div><!-- end main page content -->
 
     <!-- second content -->
-    <div class="container contentContainer">
+    <div class="container contentContainer" id="about">
       
-      <div class="row">
+      <div class="row" class="center">
         
       <h1 class="center title">Why this App is Awesome</h1>
       <p class="lead center">Summary of app's awesomeness.</p>
 
       </div>
 
-      <div class="row marginBottom">
+      <div class="row">
         
         <div class="col-md-4 marginTop">
           
-          <h2><span class="glyphicon glyphicon-music"></span>Header</h2>
+          <h2><span class="glyphicon glyphicon-music"></span> Header</h2>
           <p>A brief description of the best features of app. A brief description of the best features of app.  A brief description of the best features of app.  A brief description of the best features of app.</p>         
 
           <button class="btn btn-success marginTop">Sign Up</button>
@@ -208,7 +206,7 @@
         
         <div class="col-md-4 marginTop">
           
-          <h2><span class="glyphicon glyphicon-off"></span>Header</h2>
+          <h2><span class="glyphicon glyphicon-off"></span> Header</h2>
           <p>A brief description of the best features of app. A brief description of the best features of app.  A brief description of the best features of app.  A brief description of the best features of app.</p>         
 
           <button class="btn btn-success marginTop">Sign Up</button>
@@ -217,7 +215,7 @@
         
         <div class="col-md-4 marginTop">
           
-          <h2><span class="glyphicon glyphicon-pencil"></span>Header</h2>
+          <h2><span class="glyphicon glyphicon-pencil"></span> Header</h2>
           <p>A brief description of the best features of app. A brief description of the best features of app.  A brief description of the best features of app.  A brief description of the best features of app.</p>         
 
           <button class="btn btn-success marginTop">Sign Up</button>
@@ -230,7 +228,7 @@
 
 
     <!-- footer -->
-    <div class="containter contentContainer" id="footer">
+    <div class="container" id="footer">
       
       <div class="row">
         
