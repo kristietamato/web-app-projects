@@ -30,8 +30,8 @@
 
       #topContainer
       {
-        background-image: url("day-dream.jpg");
-        height: 600px;
+        background-image: url("images/day-dream.jpg");
+        height: 500px;
         width: 100%;
         background-size: cover; /* prevents background shrinking */
       }
@@ -60,6 +60,27 @@
       .center
       {
         text-align: center;
+      }
+
+      .title
+      {
+        margin-top: 100px;
+        font-size: 300%;
+      }
+
+      #footer
+      {
+        background-color: #999966;
+      }
+
+      .marginBottom
+      {
+        margin-bottom: 30px;
+      }
+
+      .appstoreImg
+      {
+        width: 250px;
       }
 
     </style>
@@ -136,7 +157,7 @@
 
         <div class="col-md-6 col-md-offset-3" id="topRow">
           
-          <h1 class="marginTop" >Happy Tamato App</h1>
+          <h1 class="title" >Happy Tamato App</h1>
 
           <p class="lead marginTop">This is why you should download this fantastic app.</p>
 
@@ -164,16 +185,65 @@
 
     </div><!-- end main page content -->
 
+    <!-- second content -->
     <div class="container contentContainer">
       
       <div class="row">
         
-      <h1 class="center">Why this App is Awesome</h1>
+      <h1 class="center title">Why this App is Awesome</h1>
+      <p class="lead center">Summary of app's awesomeness.</p>
 
       </div>
 
+      <div class="row marginBottom">
+        
+        <div class="col-md-4 marginTop">
+          
+          <h2><span class="glyphicon glyphicon-music"></span>Header</h2>
+          <p>A brief description of the best features of app. A brief description of the best features of app.  A brief description of the best features of app.  A brief description of the best features of app.</p>         
 
+          <button class="btn btn-success marginTop">Sign Up</button>
+        
+        </div>
+        
+        <div class="col-md-4 marginTop">
+          
+          <h2><span class="glyphicon glyphicon-off"></span>Header</h2>
+          <p>A brief description of the best features of app. A brief description of the best features of app.  A brief description of the best features of app.  A brief description of the best features of app.</p>         
+
+          <button class="btn btn-success marginTop">Sign Up</button>
+        
+        </div>
+        
+        <div class="col-md-4 marginTop">
+          
+          <h2><span class="glyphicon glyphicon-pencil"></span>Header</h2>
+          <p>A brief description of the best features of app. A brief description of the best features of app.  A brief description of the best features of app.  A brief description of the best features of app.</p>         
+
+          <button class="btn btn-success marginTop">Sign Up</button>
+        
+        </div>
+
+      </div>
+
+    </div><!-- end second content -->
+
+
+    <!-- footer -->
+    <div class="containter contentContainer" id="footer">
+      
+      <div class="row">
+        
+        <h1 class="center title">Download the App!</h1>
+
+        <p class="lead center">Why should I download the app, again?</p>
+
+        <p class="center"><img src="http://globallivingmagazine.com/wp-content/uploads/2013/12/1-googleplay-app-store.png" class="appstoreImg"></p>
+      
+      </div>
+    
     </div>
+    <!-- end footer -->
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
