@@ -39,5 +39,37 @@
 
 	unset($thirdArray["Germany"]);
 	print_r($thirdArray);
+	echo "<br /><br />";
+
+	$number = 1;
+	$number2 = 2;
+	$number3 = 2;
+
+	if ($number == $number2)
+	{
+		echo "True";
+	}
+	else
+	{
+		echo "False";
+	}
+
+		if ($number2 == $number3)
+	{
+		echo "True";
+	}
+	else
+	{
+		echo "False";
+	}
+
+	if ($number == $number2 AND $number2 == $number3)
+	{
+		echo "True";
+	}
+	else
+	{
+		echo "False";
+	}
 
  ?>
