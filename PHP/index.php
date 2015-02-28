@@ -65,6 +65,25 @@
 	echo "<br /><br />";
 
 
+	/* while loop tests */
+
+	$i = 0;
+
+	while ($array[$i])
+	{
+		echo "Key: $i Value: $array[$i] <br />";
+		$i++;
+	}
+	echo "<br /><br />";
+
+	while ($i < 20)
+	{
+		echo $i." ";
+		$i++;
+	}
+	echo "<br /><br />";
+
+
 	/* if/else test */
 
 	$number = 1;
