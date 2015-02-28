@@ -15,7 +15,7 @@
 
 		<div>
 
-			<form>
+			<form method="post">
 				
 			<label for="name">Name</label>
 			<input name="name" type="text" />
@@ -33,11 +33,11 @@
 
 		/* using GET variables */
 
-		if ($_GET["submit"])
+		if ($_POST["submit"])
 		{
-			if ($_GET["name"])
+			if ($_POST["name"])
 			{
-				echo "Your name is ".$_GET['name'];
+				echo "Your name is ".$_POST['name'];
 			}
 			else
 			{
