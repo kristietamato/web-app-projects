@@ -16,8 +16,12 @@
 			
 		<?php
 
-			
+			$emailTo = "nguyenkristie00@gmail.com";
+			$subject = "Subject";
+			$body = "Some message";
+			$headers = "From: nguyenkristie@live.com";
 
+			mail($emailTo, $subject, $body, $headers);
 
 		?>
 
