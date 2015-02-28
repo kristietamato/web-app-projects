@@ -34,14 +34,39 @@
 		</style>
 
 
-	<?php
+		<?php
 
-		if ($_POST["submit"])
-		{
-			$result = '<div class="alert alert-success">Form submitted</div>';
-		}
+			$error1 = !$_POST["name"];
+			$error2 = !$_POST["email"];
+			$error3 = !$_POST["comment"];
 
-	?>
+			if ($_POST["submit"])
+			{
+				$result = '<div class="alert alert-success">Form submitted</div>';
+			}
+
+			if (!$_POST["name"])
+			{
+				$error = "<br />Please enter your name";
+			}
+
+			if (!$_POST["email"])
+			{
+				$error .= "<br />Please enter your email";
+			}
+
+			if (!$_POST["comment"])
+			{
+				$error .= "<br />Please enter a comment";
+			}	
+
+			if ($error)
+			{
+				$result = '<div class="alert alert-danger"><strong>There were error(s) in your form: </strong>'.$error.'</div>';
+			}	
+	
+		?>
+
 	</head>
 
 	<body>
@@ -87,6 +112,5 @@
 		</div>
 
 	</body>
-
 
 </html>
