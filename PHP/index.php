@@ -41,6 +41,32 @@
 	print_r($thirdArray);
 	echo "<br /><br />";
 
+
+	for ($i = 1; $i < 10; $i++)
+	{ 
+		echo $i."<br />";
+	}
+	echo "<br />";
+
+	for ($i = 500; $i >= 100; $i = $i - 5)
+	{ 
+		echo $i." ";
+	}
+	echo "<br /><br />";
+
+
+	$array = array("cat", "dog", "turtle", "kangaroo");
+
+	/* foreach loop to loop through array */
+	foreach ($array as $key => $value)
+	{
+		echo "Key: $key Value: $value <br />";
+	}
+	echo "<br /><br />";
+
+
+	/* if/else test */
+
 	$number = 1;
 	$number2 = 2;
 	$number3 = 2;
@@ -53,6 +79,7 @@
 	{
 		echo "False";
 	}
+	echo "<br />";
 
 		if ($number2 == $number3)
 	{
@@ -62,6 +89,7 @@
 	{
 		echo "False";
 	}
+	echo "<br />";
 
 	if ($number == $number2 AND $number2 == $number3)
 	{
@@ -71,5 +99,6 @@
 	{
 		echo "False";
 	}
+	echo "<br />";
 
  ?>
