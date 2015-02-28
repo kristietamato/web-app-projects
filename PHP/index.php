@@ -21,7 +21,14 @@
 			$body = "Some message";
 			$headers = "From: nguyenkristie@live.com";
 
-			mail($emailTo, $subject, $body, $headers);
+			if (mail($emailTo, $subject, $body, $headers))
+			{
+				echo "Mail sent successfully";
+			}
+			else
+			{
+				echo "Mail not sent";
+			}
 
 		?>
 
