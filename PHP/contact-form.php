@@ -19,26 +19,23 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	
 		<style>
-		.emailForm
-		{
-			border: 1px solid grey;
-			border-radius: 10px;
-			margin-top: 20px;
-		}
 
-		form
-		{
-			padding-bottom: 20px;
-		}
+			.emailForm
+			{
+				border: 1px solid grey;
+				border-radius: 10px;
+				margin-top: 20px;
+			}
+
+			form
+			{
+				padding-bottom: 20px;
+			}
 
 		</style>
 
 
 		<?php
-
-			$error1 = !$_POST["name"];
-			$error2 = !$_POST["email"];
-			$error3 = !$_POST["comment"];
 
 			if ($_POST["submit"])
 			{
@@ -58,11 +55,30 @@
 			if (!$_POST["comment"])
 			{
 				$error .= "<br />Please enter a comment";
-			}	
+			}
+
+			if ($_POST[email] != "" AND !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+			{
+			    $error.="<br />Please enter a valid email address";
+			} 
 
 			if ($error)
 			{
-				$result = '<div class="alert alert-danger"><strong>There were error(s) in your form: </strong>'.$error.'</div>';
+				$result = '<div class="alert alert-danger">
+				<strong>There were error(s) in your form: </strong>'.$error.'</div>';
+			}
+			else
+			{
+				if(mail("nguyenkristie00@gmail.com", "Comment", "Name: ".$_POST["name"]."
+				Email: ".$_POST['email']."
+				Comment: ".$_POST['comment']))
+				{
+					$result='<div class="alert alert-success"><strong>Success!</strong></div>';
+				}
+				else
+				{
+					$result='<div class="alert alert-danger"><strong>Error. Try again.</strong></div>';
+				}
 			}	
 	
 		?>
