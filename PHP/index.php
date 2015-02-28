@@ -31,14 +31,28 @@
 
 		<?php
 
-		/* using GET variables */
+		/* using POST variables */
+
+		$names = array("Kay", "Tee", "Don");
 
 		if ($_POST["submit"])
 		{
 			if ($_POST["name"])
 			{
-				echo "Your name is ".$_POST['name'];
+				foreach ($names as $name)
+				{
+					if($_POST["name"] == $name)
+					{
+						echo "Welcome back, ".$name;
+						$existingUser = true;
+					}
+				}
+				if (!$existingUser)
+				{
+					echo "Welcome, ".$_POST['name'];
+				}
 			}
+
 			else
 			{
 				echo "Please enter your name";
