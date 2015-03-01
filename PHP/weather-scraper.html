@@ -57,14 +57,34 @@
 				margin-top: 10px;
 			}
 
+			.alert
+			{
+				margin-top: 20px;
+			}
+
 		</style>
 
 
-		<?php
+	<script>
 
+		$("#findMyWeather").click(function(event)
+		{
+			event.preventDefault();
+			$(".alert").hide();
 
-	
-		?>
+			if ($("#city").val()!= "")
+			{
+				$.get("scraper.php?city=" + $("#city").val(), function(data)
+				{
+					$(".alert").html(data).fadeIn();
+				}
+			else
+			{
+				alert("Please enter a city");
+			}
+		});
+
+	 </script>
 
 	</head>
 
@@ -84,14 +104,13 @@
 						<div class="form-group">
 							
 							<input type="text" class="form-control" placeholder="E.g. London, Paris, San Francisco..." name="city" id="city" />
-							<button class="btn btn-success btn-lg">Find my weather</button>
+							<button class="btn btn-success btn-lg" id="findMyWeather">Find my weather</button>
+
+							<div class="alert alert-success">Success!</div>
 
 						</div>
 
-
-
 					</form>
-
 
 				</div>
 
