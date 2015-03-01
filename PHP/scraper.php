@@ -1,13 +1,14 @@
 <?php
 
-	$contents = file_get_contents("http://www.weather-forecast.com/locations/San-Francisco/forecasts/latest");
+	$city = $_GET['city'];
+
+	$city=str_replace(" ", "", $city); // replace spaces in cities with empty string
+
+	$contents = file_get_contents("http://www.weather-forecast.com/locations/".$city."/forecasts/latest");
 	
-	$code = '3 Day Weather Forecast Summary:<\/b>
-			 <span class="phrase">Light rain (total 3mm), mostly falling on Sat morning. 
-			 Very mild (max 16&deg;C on Sun afternoon, min 9&deg;C on Sat night). 
-			 Wind will be generally light.<\/span>';
+	preg_match('/3 Day Weather Forecast Summary:<\/b>
+			 <span class="phrase">(.*?)</s', $contents, $matches);
 
-	preg_match("/".$code."/i", $contents, $matches);
+	echo $matches[1];
 
-	print_r($matches);
 ?>
